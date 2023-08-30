@@ -4,13 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
+import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/student")
+
 public class StudentController {
 
     @Autowired
     StudentService studentService;
+
+    // public Logger log = Logger.getLogger(String.valueOf(StudentController.class));
 
     @GetMapping("/get")
     public Student getStudent(@RequestParam("q") int regNo){
@@ -19,6 +23,7 @@ public class StudentController {
 
     @PostMapping("/add")
     public String addStudent(@RequestBody Student student){
+
         return studentService.addStudent(student);
     }
 
