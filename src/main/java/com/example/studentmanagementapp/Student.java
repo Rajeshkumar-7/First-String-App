@@ -10,8 +10,6 @@ public class Student {
 
     private String course;
 
-    private Month monthOfBirth = Month.JULY;
-
     // Default Constructor
     public Student() {
     }
@@ -63,7 +61,6 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", course='" + course + '\'' +
-                ", monthOfBirth=" + monthOfBirth +
                 '}';
     }
 }
